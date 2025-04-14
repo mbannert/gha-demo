@@ -15,3 +15,4 @@ jobs:
           R -e 'options("repos")'
       - run: |
           R -e 'install.packages("pak")'
+          R -e 'pak::pak("devtools")
