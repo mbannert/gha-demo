@@ -10,10 +10,7 @@ jobs:
   arminstall:
     runs-on: ubuntu-24.04-arm
     container: devxygmbh/r-alpine:4-3.21
-    steps:
-      - run: |
-         apk update
-         apk add harfbuzz-dev fribidi-dev
+    steps:      
       - run: |
           R -e 'install.packages("pak")'
-          R -e 'pak::pak("devtools")'
+          R -e 'pak::pak("data.table")'
