@@ -15,3 +15,4 @@ jobs:
           R -e 'install.packages("pak")'
           R -e 'pak::pak("data.table")'
           R -e 'pak::pak("gert")'
+          R -e 'pak::pak("remotes")'
