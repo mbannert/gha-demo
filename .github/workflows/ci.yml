@@ -1,9 +1,8 @@
-name: Continuous Integration
-
+name: arm experiments
 on: [push]
 
 jobs:
-  checkout:
+  install:
     runs-on: ubuntu-24.04-arm
     container:
       image: devxygmbh/r-alpine:4-3.21
