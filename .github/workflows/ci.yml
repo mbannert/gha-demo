@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-24.04-arm
     container: devxygmbh/r-alpine:4-3.21
     steps:
-      - name: Install sys libs
       - run: |
          apk update
          apk add harfbuzz-dev fribidi-dev
