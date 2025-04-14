@@ -12,6 +12,6 @@ jobs:
     container: devxygmbh/r-alpine:4-3.21
     steps:
       - run: |
-          Rscript -e 'options("repos")'
+          R -e -q 'options("repos")'
       - run: |
-          Rscript -e 'install.packages("pak")'
+          R -e -q 'install.packages("pak")'
