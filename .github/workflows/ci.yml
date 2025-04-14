@@ -1,0 +1,15 @@
+name: Continuous Integration
+
+on: [push]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-24.04-arm
+    container:
+      image: devxygmbh/r-alpine:4-3.21
+    steps:
+      - name: Install R Packages
+      run: |
+        R -e -q 'options("repos")'
+        R -e -q 'install.packages("pak")'
+
