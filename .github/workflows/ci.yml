@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-24.04-arm
     container: devxygmbh/r-alpine:4-3.21
     steps:
+      - name: Install sys libs
       - run: |
-          R -e 'options("repos")'
+         apk update
+         apk add harfbuzz-dev fribidi-dev
       - run: |
           R -e 'install.packages("pak")'
-          R -e 'pak::pkg_install(c("xfun", "knitr", "roxygen2"))'
           R -e 'pak::pak("devtools")'
